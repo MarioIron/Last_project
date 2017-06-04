@@ -15,12 +15,18 @@ RecipesSchema = new SimpleSchema({
 		authorValue: function(){
 			return this.userId
 		}
+		autoform:{
+			type:"hidden"
+		}
 	},
 	createdAt:{
 		type: Date,
 		label: "Created At",
 		authorValue: function(){
 			return new Date()
+		},
+		autoform:{
+			type:"hidden"
 		}
 	}
 });
