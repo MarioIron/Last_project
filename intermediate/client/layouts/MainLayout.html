@@ -1,8 +1,13 @@
 <template name = "Mainlayout">
 	<header>
 		<h1> My Recipe Book </h1>
+		{{>loginButtons}}
 	</header>
 	<main>
 		{{> Templete.dynamic templete = main}}
 	</main>
+</template>
+
+<template name = 'Test'>
+	Hello!!!
 </template>
