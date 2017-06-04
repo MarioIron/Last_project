@@ -15,5 +15,14 @@ RecipesSchema = new SimpleSchema({
 		authorValue: function(){
 			return this.userId
 		}
+	},
+	createdAt:{
+		type: Date,
+		label: "Created At",
+		authorValue: function(){
+			return new Date()
+		}
 	}
 });
+
+Recipes.attachSchema( RecipeSchema );
