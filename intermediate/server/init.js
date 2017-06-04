@@ -5,5 +5,5 @@
 //});
 
 Meteor.startup(function(){
-	console.
+	
 });
