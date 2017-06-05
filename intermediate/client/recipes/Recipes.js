@@ -1,3 +1,7 @@
 Meteor.subscribe('recipes');
 
-console.log(Meteor.settings.public.ga.account);
+Templete.Recipes.helpers({
+	recipes: ()=> {
+		return Recipes.find({});
+	}
+});
