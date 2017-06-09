@@ -1,5 +1,5 @@
 Template.Recipe.onCreated(function(){
-	this.editMode = new ReactiveVar()
+	this.editMode = new ReactiveVar(false);
 });
 
 Template.Recipe.helpers({
@@ -15,7 +15,7 @@ Template.Recipe.events({
 	'click .fa-trash' : function() {
 		Meteor.call('deleteRecipe', this._id);
 	},
-	'click .fa-pencil' : function() {
-		Session.set('editMode', !Session.get('editMode'));
+	'click .fa-pencil' : function(event, template) {
+		template.editMode.set(!template.editMode.get());
 	}
 });
