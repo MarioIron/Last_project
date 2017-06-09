@@ -314,13 +314,19 @@ input, select, textarea
     z-index 1
     shadow-level(1)
     trans()
-    .btn-primary, .btn-deny
+    .btn-primary
         display block
+    .btn-deny
+        display none
     &.in-menu
         background teal
         color #FFF
         h3
             border-bottom: rgba(255,255,255, 0.6) solid 3px
+        .btn-primary
+            display none
+        .btn-deny  
+            display block
     h3
         font-size: 3em;
         opacity: 0.3;
@@ -329,7 +335,7 @@ input, select, textarea
         margin-bottom 10px 
     button
         margin-top 20px 
-    .fa-trash, .fa-pencil
+    .fa-trash
         opacity 0.3
         cursor pointer
         position absolute
@@ -343,10 +349,6 @@ input, select, textarea
         &:hover
             color red 
             opacity 0.6
-    .fa-pencil
-        right 40px
-        &:hover
-            color purp
     .ingredient
         display inline-block
         margin-right 10px 
