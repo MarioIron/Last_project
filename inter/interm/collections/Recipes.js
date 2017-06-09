@@ -1,7 +1,7 @@
 Recipes = new Mongo.Collection('recipes');
 
 Recipes.allow({
-	insert: function(userId, doc){
+	insert: function(userId, doc) {
 		return !!userId;
 	}
 });
@@ -10,7 +10,7 @@ Ingredient = new SimpleSchema({
 	name: {
 		type: String
 	},
-	amount:{
+	amount: {
 		type: String
 	}
 });
@@ -21,39 +21,39 @@ RecipeSchema = new SimpleSchema({
 		type: String,
 		label: "Name"
 	},
-	desc:{
+	desc: {
 		type: String,
 		label: "Description"
 	},
 	ingredients: {
 		type: [Ingredient]
 	},
-	inMenu:{
+	inMenu: {
 		type: Boolean,
 		defaultValue: false,
 		optional: true,
-		autoform:{
-			type:'hidden'
+		autoform: {
+			type: "hidden"
 		}
 	},
-	author:{
+	author: {
 		type: String,
 		label: "Author",
-		autoValue: function(){
+		autoValue: function() {
 			return this.userId
 		},
-		autoform:{
-			type:"hidden"
+		autoform: {
+			type: "hidden"
 		}
 	},
-	createdAt:{
+	createdAt: {
 		type: Date,
 		label: "Created At",
-		autoValue: function(){
+		autoValue: function() {
 			return new Date()
 		},
-		autoform:{
-			type:"hidden"
+		autoform: {
+			type: "hidden"
 		}
 	}
 });
